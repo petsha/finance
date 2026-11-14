@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Finance"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#151719">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Business Finance Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F1EC;--panel:#FFF;--ink:#1B1E20;--dim:#5B6266;--line:#D9D4C8;--accent:#2E7D4F;--ai:#fff;--good:#2E7D4F;--bad:#B3452F;--sans:'Space Grotesk',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#15171A;--panel:#1F2226;--ink:#EDEAE2;--dim:#9BA1A5;--line:#33373B;--accent:#4FAF77;--ai:#151719;--good:#4FAF77;--bad:#E06A4E}}
+:root[data-theme="light"]{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#15171A;--panel:#1F2226;--ink:#EDEAE2;--dim:#9BA1A5;--line:#33373B;--accent:#4FAF77;--ai:#151719;--good:#4FAF77;--bad:#E06A4E}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);max-width:900px;margin:auto;padding:12px 12px 96px}
+h1,h2,h3{margin:0 0 6px;font-weight:600}
+.top{display:flex;align-items:center;gap:10px}.top h1{margin:0;font-size:22px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.top img{height:44px;max-width:120px;object-fit:contain;border-radius:8px}
+nav{position:fixed;left:0;right:0;bottom:0;z-index:10;display:flex;justify-content:center;gap:2px;background:var(--panel);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px))}
+nav button{flex:1;max-width:110px;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:0;background:transparent;color:var(--dim);font:inherit;font-size:11px;font-weight:600;min-height:58px;padding:4px 2px;border-radius:12px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+nav button span{display:flex;font-size:26px;line-height:1}
+nav button small{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+nav button.on{color:var(--ink)}nav button.on small{font-weight:700}nav button.on span{transform:scale(1.12)}
+nav button.plus{flex:none;width:64px;max-width:64px;min-height:46px;align-self:center;background:var(--accent);color:var(--ai);border-radius:14px;padding:0}nav button.plus span{font-size:28px;transform:none}
+.sheet{display:grid;gap:10px}.sheet .btn{display:flex;align-items:center;justify-content:center;width:100%}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;overflow-x:auto}
+.warn{background:color-mix(in srgb,var(--bad) 15%,var(--panel));border:1px solid var(--bad);border-radius:12px;padding:10px;margin:8px 0;font-size:13px}
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:12px 0}
+@media (min-width:700px){.wgrid{grid-template-columns:repeat(4,1fr)}}
+.wgt{--c:var(--accent);position:relative;overflow:hidden;text-align:left;display:flex;flex-direction:column;gap:2px;min-height:118px;padding:14px;border-radius:22px;border:1px solid color-mix(in srgb,var(--c) 40%,var(--line));background:linear-gradient(150deg,color-mix(in srgb,var(--c) 30%,var(--panel)),var(--panel) 78%);color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.12);transition:transform .12s;cursor:pointer;font:inherit;width:100%}
+.wgt:active{transform:scale(.96)}
+.wi{color:var(--c);font-size:28px;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:14px;background:color-mix(in srgb,var(--c) 28%,transparent);margin-bottom:8px}
+.wn{font-family:var(--mono);font-size:17px;font-weight:700}.wl{font-size:13px;font-weight:600}.ws{font-size:11px;color:var(--dim)}
+.btn{background:var(--accent);color:var(--ai);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer}
+.btn{min-height:44px}.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}.btn.sm{padding:6px 12px;font-size:13px;min-height:44px}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left}
+.r{text-align:right;font-family:var(--mono)}.in{color:var(--good)}.out{color:var(--bad)}
+.thumb{width:48px;height:48px;object-fit:cover;border-radius:8px;cursor:pointer}
+.row{display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:20px;z-index:20}
+.mod{background:var(--panel);border-radius:16px;padding:16px;width:100%;max-width:420px;display:grid;gap:10px}
+label{display:grid;gap:4px;font-size:12px;color:var(--dim)}
+input,select{font:inherit;font-size:16px;min-height:44px;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.pv{max-width:100%;border-radius:10px}.big{max-width:100%;border-radius:12px}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}.gal img{width:100%;height:120px;object-fit:cover;border-radius:12px;cursor:pointer}
+.seg{display:flex;gap:6px;margin-bottom:8px}.seg button{flex:1}
+.ib{width:44px;height:44px;flex:none;display:inline-flex;align-items:center;justify-content:center;font-size:20px;line-height:1;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent}.ib:active{transform:scale(.94)}
+.acts{display:flex;gap:6px;align-items:center;justify-content:flex-end}
+.ic{width:1em;height:1em;display:block;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.ib .ic{width:24px;height:24px}
+.btn .ic{display:inline-block;width:20px;height:20px;vertical-align:-4px;margin-right:6px}
+@media (max-width:520px){.acts{flex-wrap:wrap;width:96px;margin-left:auto}.acts .btn{flex:1 1 100%}.top .ib{width:48px;height:48px}}
+[hidden]{display:none!important}
+.seg .btn{padding:6px 4px;font-size:12.5px;min-width:0}
+.it{border:1px solid var(--line);border-radius:12px;padding:10px;display:grid;gap:8px;margin:8px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sum{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:14px;line-height:1.7}.sum b{font-family:var(--mono)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(90px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:12px;z-index:40;font-size:14px;max-width:90%;text-align:center}
+.inv-wrap{width:100%;max-width:660px}.inv-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.inv-actions .btn{flex:1 1 40%}
+@media print{body>*:not(.inv-ov){display:none!important}.inv-ov{position:static!important;background:#fff!important;padding:0!important;overflow:visible!important}.inv-actions{display:none!important}.paper{border-radius:0!important}body{padding:0!important}}
+</style></head><body>
+<div id="app"></div>
+<script>
+const $=s=>document.querySelector(s);
+const P={home:'<path d="M3 11l9-8 9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/>',sales:'<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',expenses:'<path d="M3 7l6 6 4-4 8 8"/><path d="M15 17h6v-6"/>',stock:'<path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/>',docs:'<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h6"/>',reports:'<path d="M3 3v18h18"/><path d="M8 17v-5M13 17V7M18 17v-8"/>',settings:'<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',moon:'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',trash:'<path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v5M14 11v5"/>',pencil:'<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>',camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>'};
+P.gear='<path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>';P.plus='<path d="M12 5v14M5 12h14"/>';P.share='<path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v7h14v-7"/>';P.play='<path d="M7 4l13 8-13 8z"/>';P.pause='<path d="M8 4v16M16 4v16"/>';P.back='<path d="M15 5l-7 7 7 7"/>';P.users='<circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><path d="M17 4.5a3.5 3.5 0 0 1 0 7M22 20c0-3-1.5-5-4-5.7"/>';
+const I=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${P[n]||''}</svg>`;
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+const today=()=>iso(new Date());
+const METH=['Cash','M-Pesa','Airtel Money','Orange Money','Africell Money','Bank','Credit'];
+const K='fin_tracker_v1';
+let S=null;try{S=JSON.parse(localStorage.getItem(K))}catch(e){}
+S=S||{set:{name:'My Business',logo:'',cur:'USD',rate:2800,start:today(),pay:{}},tx:[],prod:[],docs:[]};
+S.set={vat:16,vatIncl:'excl',addr:'',email:'',phone:'',nif:'',vatno:'',...S.set};S.seq=S.seq||0;S.clients=S.clients||[];S.rec=S.rec||[];
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){alert('Storage is full. Delete some photos or export a backup.')}}
+const uid=()=>Date.now()+Math.floor(Math.random()*1000);
+const cv=(a,c)=>c===S.set.cur?+a:(S.set.cur==='USD'?a/S.set.rate:a*S.set.rate);
+const fmt=n=>S.set.cur==='USD'?'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}):Math.round(n).toLocaleString('en-US')+' FC';
+const fc=(a,c)=>c==='USD'?'$'+(+a).toFixed(2):Math.round(a).toLocaleString('en-US')+' FC';
+const paid=t=>t.method!=='Credit';
+const sum=(L,ty)=>L.filter(t=>t.type===ty&&paid(t)).reduce((s,t)=>s+cv(t.amount,t.cur),0);
+const owed=()=>S.tx.filter(t=>t.type==='in'&&!paid(t)).reduce((s,t)=>s+cv(t.amount,t.cur),0);
+const expiry=()=>{const d=new Date(S.set.start+'T00:00:00');d.setDate(d.getDate()+90);return d};
+const daysLeft=()=>Math.ceil((expiry()-new Date())/864e5);
+const locked=()=>daysLeft()<0;
+
+function readImg(f,max){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height));const c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',.8))};im.onerror=rej;im.src=r.result};r.onerror=rej;r.readAsDataURL(f)})}
+
+function modal(title,fields,init,ok){
+  const o=document.createElement('div');o.className='ov';const ph={};
+  o.innerHTML=`<form class="mod"><h3>${title}</h3>${fields.map(([k,l,t,opt])=>`<label>${l}${t==='select'?`<select name="${k}">${opt.map(x=>`<option>${esc(x)}</option>`).join('')}</select>`:t==='photo'?`<input type="file" accept="image/*" capture="environment" name="${k}"><img class="pv" hidden>`:`<input name="${k}" type="${t}" ${t==='number'?'step="any" min="0"':''}>`}</label>`).join('')}<div class="row"><button type="button" class="btn ghost" id="x">Cancel</button><button class="btn">${fields.length?'Save':'Yes, delete'}</button></div></form>`;
+  document.body.appendChild(o);const f=o.querySelector('form');
+  fields.forEach(([k,,t])=>{if(t==='photo'){f.elements[k].onchange=async e=>{if(!e.target.files[0])return;ph[k]=await readImg(e.target.files[0],1200);const p=f.querySelector('.pv');p.src=ph[k];p.hidden=false}}else if(init[k]!=null)f.elements[k].value=init[k]});
+  o.querySelector('#x').onclick=()=>o.remove();
+  f.onsubmit=e=>{e.preventDefault();const v={};fields.forEach(([k,,t])=>v[k]=t==='photo'?(ph[k]||init[k]||''):f.elements[k].value);if(fields.some(x=>x[0]==='amount')&&!(+v.amount>0))return;o.remove();ok(v);save();render()}
+}
+function view(src){const o=document.createElement('div');o.className='ov';o.innerHTML=`<img class="big" src="${src}">`;o.onclick=()=>o.remove();document.body.appendChild(o)}
+function ask(msg,fn,yes){const o=document.createElement('div');o.className='ov';o.innerHTML=`<div class="mod"><h3>${msg}</h3><div class="row"><button class="btn ghost" id="n">Cancel</button><button class="btn" id="y">${yes||'Yes, delete'}</button></div></div>`;document.body.appendChild(o);o.querySelector('#n').onclick=()=>o.remove();o.querySelector('#y').onclick=()=>{o.remove();fn();save();render()}}
+function lockMsg(){modal('Lease expired',[],{},()=>{});document.querySelector('.mod h3').insertAdjacentHTML('afterend','<p style="font-size:14px">Your 3-month lease has ended. Renew for $30 via Mobile Money, then ask your provider to reactivate.</p>')}
+
+function addTx(type,pre={}){
+  if(type==='in')return addSale(pre);
+  if(locked())return lockMsg();
+  const fields=[['date','Date','date'],['amount','Amount','number'],['cur','Currency','select',['USD','CDF']],['method','Paid with','select',METH],['note',type==='in'?'Description':'Category / description','text'],['photo',type==='in'?'Photo (product / receipt)':'Photo of invoice / receipt','photo']];
+  modal(type==='in'?'New sale':'New expense',fields,{date:today(),cur:S.set.cur,method:'Cash',...pre},v=>{S.tx.push({id:uid(),type,...v,amount:+v.amount,pid:pre.pid});if(pre.pid){const p=S.prod.find(p=>p.id===pre.pid);if(p&&p.stock>0)p.stock--}});
+}
+function editProd(p){
+  if(locked())return lockMsg();
+  modal(p?'Edit product':'New product',[['name','Product name','text'],['price','Selling price','number'],['cur','Currency','select',['USD','CDF']],['stock','Stock quantity','number'],['min','Warn me when stock reaches','number'],['photo','Product photo','photo']],p?{min:3,...p}:{cur:S.set.cur,stock:0,min:3},v=>{v.price=+v.price;v.stock=+v.stock||0;v.min=v.min===''?3:+v.min;if(p)Object.assign(p,v);else S.prod.push({id:uid(),...v})});
+}
+function addDoc(){
+  if(locked())return lockMsg();
+  modal('New document',[['title','Title (e.g. supplier invoice)','text'],['date','Date','date'],['photo','Photo','photo']],{date:today()},v=>{if(v.photo)S.docs.push({id:uid(),...v})});
+}
+function markPaid(id){const t=S.tx.find(t=>t.id===id);modal('Payment received',[['method','Paid with','select',METH.filter(m=>m!=='Credit')]],{method:'Cash'},v=>{t.method=v.method})}
+function delTx(id){const t=S.tx.find(x=>x.id===id);ask(t&&(t.pid||(t.items||[]).some(i=>i.pid))?'Delete this entry? The stock will be put back.':'Delete this entry?',()=>{if(t&&t.type==='in')itemsOf(t).forEach(it=>{const p=it.pid&&S.prod.find(p=>p.id===it.pid);if(p)p.stock+=it.qty});S.tx=S.tx.filter(x=>x.id!==id)})}
+
+// ---- sales, VAT, stock alerts, invoices
+const r2=n=>Math.round(n*100)/100;
+function calcVat(qty,price,on){const s=S.set,rate=on?(+s.vat||0):0,line=qty*price;let net=line,vat=0,tot=line;if(rate>0){if(s.vatIncl==='incl'){net=tot/(1+rate/100);vat=tot-net}else{vat=net*rate/100;tot=net+vat}}return{net:r2(net),vat:r2(vat),tot:r2(tot),rate}}
+function toast(m){const d=document.createElement('div');d.className='toast';d.textContent=m;document.body.appendChild(d);setTimeout(()=>d.remove(),4500)}
+function lowBanner(){const L=S.prod.filter(p=>p.stock<=(p.min??3));return L.length?`<div class="warn" style="cursor:pointer" onclick="location.hash='#stock'"><b>Stock running low:</b> ${L.map(p=>esc(p.name)+' ('+(p.stock<=0?'out':p.stock+' left')+')').join(', ')}</div>`:''}
+const itemsOf=t=>t.items||[{pid:t.pid,name:t.note,qty:t.qty||1,price:t.price??((t.net??t.amount)/(t.qty||1))}];
+const toCur=(a,from,to)=>from===to?+a:(from==='USD'?a*S.set.rate:a/S.set.rate);
+function itemRows(t){const L=itemsOf(t),sum=L.reduce((s,i)=>s+i.qty*i.price,0)||1,k=(t.net??t.amount)/sum;return L.map(i=>`<tr><td>${esc(i.name)}</td><td class="r">${i.qty}</td><td class="r">${fc(i.price*k,t.cur)}</td><td class="r">${fc(i.qty*i.price*k,t.cur)}</td></tr>`).join('')}
+function itemLines(t){const L=itemsOf(t),sum=L.reduce((s,i)=>s+i.qty*i.price,0)||1,k=(t.net??t.amount)/sum;return L.map(i=>i.name+' × '+i.qty+' · '+fc(i.qty*i.price*k,t.cur))}
+async function saveFile(name,data){try{if(typeof claude!=='undefined'){const d=await claude.use('downloads');if(!d)return false;await d.save({filename:name,data});return true}}catch(e){return false}
+  try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:name.endsWith('.json')?'application/json':'text/html'}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500);return true}catch(e){return false}}
+function addSale(pre={}){
+  if(locked())return lockMsg();
+  const hasV=(+S.set.vat||0)>0,o=document.createElement('div');o.className='ov';
+  let items=[{pid:pre.pid&&S.prod.some(p=>p.id===pre.pid&&p.stock>0)?String(pre.pid):'',name:'',qty:1,price:''}];
+  o.innerHTML=`<form class="mod"><h3>New sale</h3>
+  <label>Client<select name="cid"><option value="">Walk-in customer</option>${S.clients.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></label>
+  <div class="two"><label>Currency<select name="cur"><option>USD</option><option>CDF</option></select></label><label>Paid with<select name="method">${METH.map(m=>`<option>${m}</option>`).join('')}</select></label></div>
+  <label>Date<input name="date" type="date"></label>
+  <div id="items"></div>
+  <button type="button" class="btn ghost" id="add">+ Add item</button>
+  ${hasV?`<label>VAT<select name="vat"><option value="1">Add VAT (${S.set.vat}%)</option><option value="0">No VAT on this sale</option></select></label>`:''}
+  <div class="sum" id="sum"></div>
+  <div class="row"><button type="button" class="btn ghost" id="x">Cancel</button><button class="btn">Save sale</button></div></form>`;
+  document.body.appendChild(o);const f=o.querySelector('form'),E=f.elements,box=o.querySelector('#items');
+  E.cur.value=S.set.cur;E.date.value=today();E.method.value='Cash';if(pre.cid)E.cid.value=pre.cid;
+  const von=()=>hasV&&E.vat.value==='1';
+  const prodOpts=sel=>`<option value="">Other (not in stock list)</option>${S.prod.map(p=>`<option value="${p.id}" ${String(p.id)===sel?'selected':''} ${p.stock<=0?'disabled':''}>${esc(p.name)} — ${p.stock<=0?'out of stock':p.stock+' left'}</option>`).join('')}`;
+  const upd=()=>{const c=calcVat(1,items.reduce((s,it)=>s+(+it.qty||0)*(+it.price||0),0),von()),cu=E.cur.value;
+    o.querySelector('#sum').innerHTML=`Subtotal <b>${fc(c.net,cu)}</b>${c.rate?`<br>VAT ${c.rate}% <b>${fc(c.vat,cu)}</b>`:''}<br>Total <b>${fc(c.tot,cu)}</b>`};
+  const draw=()=>{box.innerHTML=items.map((it,i)=>`<div class="it"><div class="row" style="flex-wrap:nowrap"><b>Item ${i+1}</b>${items.length>1?`<button type="button" class="ib" data-rm="${i}" aria-label="Remove item">${I('trash')}</button>`:''}</div>
+    <select data-i="${i}" data-k="pid">${prodOpts(it.pid)}</select>${it.pid?'':`<input data-i="${i}" data-k="name" placeholder="Item name" value="${esc(it.name)}">`}
+    <div class="two"><label>Quantity<input data-i="${i}" data-k="qty" type="number" min="1" step="1" inputmode="numeric" value="${it.qty}"></label><label>Unit price<input data-i="${i}" data-k="price" type="number" min="0" step="any" inputmode="decimal" value="${it.price}"></label></div></div>`).join('');upd()};
+  box.oninput=e=>{const t=e.target;if(t.dataset.i==null||t.dataset.k==='pid')return;items[t.dataset.i][t.dataset.k]=t.value;upd()};
+  box.onchange=e=>{const t=e.target;if(t.dataset.k!=='pid')return;const it=items[t.dataset.i],p=S.prod.find(p=>p.id===+t.value);it.pid=t.value;if(p){it.name=p.name;it.price=r2(toCur(p.price,p.cur,E.cur.value))}draw()};
+  box.onclick=e=>{const b=e.target.closest('[data-rm]');if(b){items.splice(+b.dataset.rm,1);draw()}};
+  E.cur.onchange=()=>{items.forEach(it=>{const p=S.prod.find(p=>p.id===+it.pid);if(p)it.price=r2(toCur(p.price,p.cur,E.cur.value))});draw()};
+  if(hasV)E.vat.onchange=upd;
+  o.querySelector('#add').onclick=()=>{items.push({pid:'',name:'',qty:1,price:''});draw()};
+  o.querySelector('#x').onclick=()=>o.remove();
+  const p0=S.prod.find(p=>p.id===+items[0].pid);if(p0){items[0].name=p0.name;items[0].price=r2(toCur(p0.price,p0.cur,E.cur.value))}
+  draw();
+  f.onsubmit=e=>{e.preventDefault();
+    const L=items.map(it=>{const p=S.prod.find(p=>p.id===+it.pid);return{pid:p?p.id:undefined,name:p?p.name:(it.name||'').trim(),qty:Math.floor(+it.qty),price:+it.price}});
+    if(L.some(i=>!(i.qty>0)||!(i.price>0)||!i.name))return toast('Fill in the name, quantity and price of every item');
+    const need={};L.forEach(i=>{if(i.pid)need[i.pid]=(need[i.pid]||0)+i.qty});
+    for(const id in need){const p=S.prod.find(p=>p.id===+id);if(p&&need[id]>p.stock)return toast('Only '+p.stock+' of '+p.name+' in stock')}
+    const c=calcVat(1,L.reduce((s,i)=>s+i.qty*i.price,0),von()),cl=S.clients.find(x=>x.id===+E.cid.value)||{};S.seq=(S.seq||0)+1;
+    S.tx.push({id:uid(),type:'in',date:E.date.value||today(),cur:E.cur.value,method:E.method.value,items:L,note:L.map(i=>i.name+(i.qty>1?' × '+i.qty:'')).join(', '),cust:cl.name||'',cid:cl.id,net:c.net,vat:c.vat,vrate:c.rate,amount:c.tot,no:'INV-'+String(S.seq).padStart(4,'0')});
+    const low=[];Object.keys(need).forEach(id=>{const p=S.prod.find(p=>p.id===+id);p.stock-=need[id];if(p.stock<=(p.min??3))low.push(p.stock<=0?p.name+' is now out of stock':'Low stock: only '+p.stock+' of '+p.name+' left')});
+    o.remove();save();render();if(low.length)toast(low.join('. '))};
+}
+const PAPERCSS='.paper{background:#fff;color:#111;border-radius:12px;padding:18px;font:14px/1.45 system-ui,sans-serif;max-width:640px;margin:0 auto}.paper h2{margin:0 0 3px;font-size:17px;color:#111}.paper .ph{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:2px solid #111;padding-bottom:10px;margin-bottom:10px}.paper .ph img{height:56px;max-width:110px;object-fit:contain}.paper .pt{display:flex;justify-content:space-between;margin:8px 0}.paper table{width:100%;border-collapse:collapse;margin:10px 0}.paper th,.paper td{padding:6px 4px;border-bottom:1px solid #ccc;text-align:left;color:#111}.paper .r{text-align:right;font-family:inherit;color:#111}.paper .tot{display:flex;justify-content:space-between;padding:3px 4px}.paper .gt{font-weight:700;font-size:16px;border-top:2px solid #111;margin-top:4px;padding-top:6px}.paper .pay{margin-top:12px;font-size:13px;border-top:1px dashed #999;padding-top:8px}.paper .pi{text-align:right;font-size:11.5px;line-height:1.4;color:#333}';
+document.head.insertAdjacentHTML('beforeend','<style>'+PAPERCSS+'</style>');
+function invData(t){const s=S.set,q=t.qty||1,net=t.net??t.amount,no=t.no||('#'+String(t.id).slice(-6));
+  const hdr=[s.addr,s.email,s.phone&&'Tel: '+s.phone,s.nif&&'NIF: '+s.nif,s.vatno&&'VAT No: '+s.vatno].filter(Boolean);
+  const pays=METH.slice(1,5).filter(m=>s.pay[m]).map(m=>[m,s.pay[m]]);return{s,q,net,cur:t.cur,no,hdr,pays}}
+function paperHtml(t){const {s,q,net,cur,no,hdr,pays}=invData(t);
+  return `<div class="paper">${paperHead(s,hdr)}
+  <div class="pt"><b>INVOICE ${esc(no)}</b><span>${esc(t.date)}</span></div>${t.cust?`<div>Customer: ${esc(t.cust)}</div>`:''}
+  <table><tr><th>Item</th><th class="r">Qty</th><th class="r">Price</th><th class="r">Total</th></tr>${itemRows(t)}</table>
+  <div class="tot"><span>Subtotal</span><span>${fc(net,cur)}</span></div>${t.vat?`<div class="tot"><span>VAT ${t.vrate}%</span><span>${fc(t.vat,cur)}</span></div>`:''}
+  <div class="tot gt"><span>TOTAL</span><span>${fc(t.amount,cur)}</span></div>
+  <div class="tot"><span>Status</span><span>${paid(t)?'Paid · '+esc(t.method):'UNPAID'}</span></div>
+  ${pays.length?`<div class="pay"><b>Pay by Mobile Money</b>${pays.map(([m,n])=>`<div>${esc(m)}: ${esc(n)}</div>`).join('')}</div>`:''}</div>`}
+function invoice(id,alt){const t=alt?{}:S.tx.find(x=>x.id===id);if(!t)return;const {s,q,net,cur,no,hdr,pays}=alt?{no:alt.no,hdr:[],pays:[]}:invData(t);
+  const txt=alt?alt.txt:[s.name,...hdr,'','INVOICE '+no+' · '+t.date,t.cust?'Customer: '+t.cust:null,'',...itemLines(t),'Subtotal: '+fc(net,cur),t.vat?'VAT '+t.vrate+'%: '+fc(t.vat,cur):null,'TOTAL: '+fc(t.amount,cur),paid(t)?'Paid · '+t.method:'UNPAID',pays.length?'':null,pays.length?'Pay by Mobile Money:':null,...pays.map(([m,n])=>m+': '+n)].filter(x=>x!==null).join('\n');
+  const o=document.createElement('div');o.className='ov inv-ov';
+  o.innerHTML=`<div class="inv-wrap"><div class="inv-actions"><button class="btn" data-a="sh">${I('share')}&nbsp;Share</button><button class="btn ghost" data-a="pr">Print</button><button class="btn ghost" data-a="sv">Save file</button><button class="btn ghost" data-a="cl">Close</button></div>${alt?alt.html:paperHtml(t)}</div>`;
+  document.body.appendChild(o);
+  const act={cl:()=>o.remove(),pr:()=>{try{window.print()}catch(e){toast('Use Save file, then print it')}},
+    sh:async()=>{try{if(navigator.share){await navigator.share({title:(alt?'Statement ':'Invoice ')+no,text:txt});return}}catch(e){if(e&&e.name==='AbortError')return}
+      try{await navigator.clipboard.writeText(txt);toast('Invoice copied. Paste it in WhatsApp or SMS.')}catch(e){toast('Sharing is not available here. Use Save file.')}},
+    sv:async()=>{try{if(!await saveFile((alt?'statement-':'invoice-')+no.replace(/[^\w-]/g,'')+'.html','<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Invoice '+esc(no)+'</title><style>body{margin:16px;background:#fff}'+PAPERCSS+'</style></head><body>'+(alt?alt.html:paperHtml(t))+'</body></html>'))toast('Saving is not available here. Use Share.')}catch(e){toast('Could not save the file.')}}};
+  o.onclick=e=>{if(e.target===o)o.remove()};o.querySelectorAll('[data-a]').forEach(b=>b.onclick=act[b.dataset.a])}
+
+// ---- reports
+const monday=s=>{const d=new Date(s+'T00:00:00');d.setDate(d.getDate()-(d.getDay()+6)%7);return iso(d)};
+const key=(s,k)=>k==='day'?s:k==='week'?monday(s):k==='month'?s.slice(0,7):s.slice(0,4);
+function buckets(k){const n={day:14,week:8,month:12,year:5}[k],out=[],now=new Date();
+  for(let i=n-1;i>=0;i--){const d=new Date(now);
+    if(k==='day')d.setDate(d.getDate()-i);else if(k==='week')d.setDate(d.getDate()-7*i);else if(k==='month'){d.setDate(1);d.setMonth(d.getMonth()-i)}else d.setFullYear(d.getFullYear()-i);
+    const key0=key(iso(d),k);out.push({k:key0,l:k==='day'?key0.slice(8):k==='week'?key0.slice(8)+'/'+key0.slice(5,7):k==='month'?key0.slice(2,7):key0})}
+  return out}
+let rk='day';
+function chart(B,data){
+  const mx=Math.max(1,...B.flatMap(b=>[data[b.k].i,data[b.k].o])),w=640/B.length;
+  return `<svg viewBox="0 0 640 230" width="100%" role="img" aria-label="Income and expenses chart">${B.map((b,i)=>{const hi=data[b.k].i/mx*170,ho=data[b.k].o/mx*170,x=i*w;
+    return `<rect x="${x+w*.12}" y="${185-hi}" width="${w*.34}" height="${hi}" rx="3" fill="var(--good)"/><rect x="${x+w*.5}" y="${185-ho}" width="${w*.34}" height="${ho}" rx="3" fill="var(--bad)"/><text x="${x+w/2}" y="205" text-anchor="middle" font-size="12" fill="var(--dim)">${b.l}</text>`}).join('')}</svg>`}
+function reports(){
+  const B=buckets(rk),data={};B.forEach(b=>data[b.k]={i:0,o:0,n:0});
+  S.tx.filter(paid).forEach(t=>{const d=data[key(t.date,rk)];if(d){const a=cv(t.amount,t.cur);t.type==='in'?(d.i+=a,d.n++):d.o+=a}});
+  const cur=B[B.length-1].k,L=S.tx.filter(t=>key(t.date,rk)===cur),inc=sum(L,'in'),exp=sum(L,'out'),ns=L.filter(t=>t.type==='in'&&paid(t)).length;
+  const vatc=L.filter(t=>t.type==='in'&&paid(t)&&t.vat).reduce((s,t)=>s+cv(t.vat,t.cur),0);const bym={};L.filter(t=>paid(t)&&t.type==='in').forEach(t=>bym[t.method]=(bym[t.method]||0)+cv(t.amount,t.cur));
+  const names={day:'Today',week:'This week',month:'This month',year:'This year'};
+  return `<div class="card"><div class="seg">${['day','week','month','year'].map(k=>`<button class="btn ${k===rk?'':'ghost'} sm" onclick="rk='${k}';render()">${{day:'Daily',week:'Weekly',month:'Monthly',year:'Annual'}[k]}</button>`).join('')}</div>
+  <h3>${names[rk]}</h3><div class="wgrid">${T('','#22C55E',fmt(inc),'Income',ns+' sales')}${T('','#EF4444',fmt(exp),'Expenses','')}${T('',inc>=exp?'#3B82F6':'#F59E0B',fmt(inc-exp),'Profit',inc?Math.round((inc-exp)/inc*100)+'% margin':'')}${T('','#8B5CF6',ns?fmt(inc/ns):'–','Average sale','')}</div>
+  ${vatc?`<p style="font-size:13px">VAT included in income: <b>${fmt(vatc)}</b></p>`:''}<p style="font-size:12px;color:var(--dim)"><span class="in">■</span> income &nbsp;<span class="out">■</span> expenses (paid only)</p>${chart(B,data)}</div>
+  <div class="card"><h3>Income by payment method</h3>${Object.keys(bym).length?`<table>${Object.entries(bym).sort((a,b)=>b[1]-a[1]).map(([m,a])=>`<tr><td>${m}</td><td class="r">${fmt(a)}</td></tr>`).join('')}</table>`:'<p style="color:var(--dim)">No sales in this period.</p>'}</div>`}
+
+// ---- pages
+function T(route,color,num,label,sub,icon){return `<button class="wgt" style="--c:${color}" ${route?`onclick="location.hash='#${route}'"`:''}>${icon?`<span class="wi">${icon}</span>`:''}<span class="wn">${num}</span><span class="wl">${label}</span><span class="ws">${sub||''}</span></button>`}
+const W=(route,icon,color,num,label,sub)=>`<button class="wgt" style="--c:${color}" onclick="location.hash='#${route}'"><span class="wi">${I(icon)}</span>${num!==''?`<span class="wn">${num}</span>`:''}<span class="wl">${label}</span><span class="ws">${sub||''}</span></button>`;
+function txPage(type){
+  const L=S.tx.filter(t=>t.type===type).sort((a,b)=>b.date.localeCompare(a.date)||b.id-a.id).slice(0,200);
+  return `<div class="card">${segTabs(type==='in'?'sales':'expenses')}<div class="row"><h3>${type==='in'?'Sales':'Expenses'}</h3><button class="btn" onclick="addTx('${type}')">+ Add</button></div>
+  ${L.length?`<table>${L.map(t=>`<tr><td>${t.photo?`<img class="thumb" src="${t.photo}" onclick="view(this.src)">`:''}</td><td>${t.date.slice(5)}<br><small style="color:var(--dim)">${esc(t.note)||'—'}${t.qty>1?' × '+t.qty:''}${t.cust?' · '+esc(t.cust):''}${t.vat?` · VAT ${fc(t.vat,t.cur)}`:''}</small></td><td><small>${t.method}</small>${!paid(t)?`<br><button class="btn sm" onclick="markPaid(${t.id})">Mark paid</button>`:''}</td><td class="r ${type}">${fc(t.amount,t.cur)}</td><td><div class="acts">${type==='in'?`<button class="ib" aria-label="Share invoice" onclick="invoice(${t.id})">${I('share')}</button>`:''}<button class="ib" aria-label="Delete" onclick="delTx(${t.id})">${I('trash')}</button></div></td></tr>`).join('')}</table>`:'<p style="color:var(--dim)">Nothing yet. Tap + Add.</p>'}</div>`}
+const pages={
+home(){
+  const td=today(),L=S.tx.filter(t=>t.date===td),m=td.slice(0,7),LM=S.tx.filter(t=>t.date.slice(0,7)===m),h=new Date().getHours();
+  const low=S.prod.filter(p=>p.stock<=2).length;
+  return `<h2>${h<12?'Good morning':h<18?'Good afternoon':'Good evening'}</h2><div class="wgrid">
+  ${W('sales','sales','#22C55E',fmt(sum(L,'in')),'Sales today',L.filter(t=>t.type==='in').length+' sales')}
+  ${W('expenses','expenses','#EF4444',fmt(sum(L,'out')),'Expenses today','')}
+  ${W('reports','reports','#3B82F6',fmt(sum(LM,'in')-sum(LM,'out')),'Profit this month','')}
+  ${W('sales','clock','#F59E0B',fmt(owed()),'Owed to me','on credit')}
+  ${W('stock','stock','#8B5CF6',S.prod.length,'Products',low?low+' low in stock':'')}
+  ${W('docs','docs','#14B8A6',S.docs.length,'Documents','invoices &amp; photos')}
+  ${W('reports','reports','#22C55E','','Reports','daily · weekly · yearly')}
+  ${W('settings','settings','#64748B','','Settings','logo, rate, lease')}</div>
+  <div class="row"><button class="btn" onclick="addTx('in')">+ New sale</button><button class="btn ghost" onclick="addTx('out')">+ New expense</button><button class="btn ghost" onclick="addDoc()">${I('camera')}Scan invoice</button></div>`},
+sales:()=>txPage('in'),expenses:()=>txPage('out'),reports,
+stock(){return `<div class="card"><div class="row"><h3>Products</h3><button class="btn" onclick="editProd()">+ Add</button></div>${S.prod.length?`<table>${S.prod.map(p=>`<tr><td>${p.photo?`<img class="thumb" src="${p.photo}" onclick="view(this.src)">`:''}</td><td>${esc(p.name)}<br><small style="color:var(--dim)">Stock: ${p.stock}</small> ${p.stock<=0?'<b class="out" style="font-size:12px">Out</b>':p.stock<=(p.min??3)?'<b class="out" style="font-size:12px">Low</b>':''}</td><td class="r">${fc(p.price,p.cur)}</td><td><div class="acts"><button class="btn sm" ${p.stock<=0?'disabled':''} onclick="addSale({pid:${p.id}})">Sell</button> <button class="ib" aria-label="Edit" onclick="editProd(S.prod.find(x=>x.id===${p.id}))">${I('pencil')}</button> <button class="ib" aria-label="Delete" onclick="ask('Delete product?',()=>S.prod=S.prod.filter(x=>x.id===${p.id}?false:true))">${I('trash')}</button></div></td></tr>`).join('')}</table>`:'<p style="color:var(--dim)">Add your products with a photo and price.</p>'}</div>`},
+docs(){return `<div class="card"><div class="row"><h3>Invoices &amp; documents</h3><button class="btn" onclick="addDoc()">${I('camera')}Add</button></div><div class="gal">${[...S.docs].reverse().map(d=>`<div><img src="${d.photo}" onclick="view(this.src)"><small>${esc(d.title)||'Document'} · ${d.date.slice(5)}</small><br><button class="ib" aria-label="Delete" onclick="ask('Delete document?',()=>S.docs=S.docs.filter(x=>x.id!==${d.id}))">${I('trash')}</button></div>`).join('')||'<p style="color:var(--dim)">Take a photo of each invoice to keep it safe.</p>'}</div></div>`},
+settings(){const s=S.set,dl=daysLeft();return `<div class="card"><h3>Business</h3><div style="display:grid;gap:10px">
+  <label>Business name<input value="${esc(s.name)}" onchange="up('name',this.value)"></label>
+  <label>Logo<input type="file" accept="image/*" onchange="readImg(this.files[0],300).then(d=>{S.set.logo=d;save();render()})"></label>
+  <label>Main currency for reports<select onchange="up('cur',this.value)"><option ${s.cur==='USD'?'selected':''}>USD</option><option ${s.cur==='CDF'?'selected':''}>CDF</option></select></label>
+  <label>Exchange rate: 1 USD = ? CDF<input type="number" value="${s.rate}" onchange="up('rate',+this.value||2800)"></label></div></div>
+  <div class="card"><h3>Invoice header &amp; VAT</h3><p style="font-size:12px;color:var(--dim);margin:0 0 8px">Printed at the top of every invoice.</p><div style="display:grid;gap:10px">
+  <label>Address<input value="${esc(s.addr)}" onchange="up('addr',this.value)"></label>
+  <label>Email<input type="email" value="${esc(s.email)}" onchange="up('email',this.value)"></label>
+  <label>Cell number<input type="tel" value="${esc(s.phone)}" onchange="up('phone',this.value)"></label>
+  <label>NIF number<input value="${esc(s.nif)}" onchange="up('nif',this.value)"></label>
+  <label>VAT number<input value="${esc(s.vatno)}" onchange="up('vatno',this.value)"></label>
+  <label>VAT rate (%) — 0 means no VAT<input type="number" step="any" min="0" value="${s.vat}" onchange="up('vat',Math.max(0,+this.value||0))"></label>
+  <label>VAT on your prices<select onchange="up('vatIncl',this.value)"><option value="excl" ${s.vatIncl==='incl'?'':'selected'}>Added on top of my prices</option><option value="incl" ${s.vatIncl==='incl'?'selected':''}>Already included in my prices</option></select></label></div></div>
+  ${recurCard()}
+  <div class="card"><h3>Mobile Money numbers (printed on invoices)</h3><div style="display:grid;gap:10px">${METH.slice(1,5).map(m=>`<label>${m}<input value="${esc(s.pay[m]||'')}" onchange="S.set.pay['${m}']=this.value;save()"></label>`).join('')}</div></div>
+  <div class="card"><h3>Lease · $30 / 3 months</h3><p>${dl<0?'<b class="out">Expired</b>':'Active · '+dl+' days left'} (until ${iso(expiry())})</p>
+  <label>Lease start date<input type="date" value="${s.start}" onchange="up('start',this.value)"></label>
+  <p style="font-size:12px;color:var(--dim)">Pay via M-Pesa, Airtel Money, Orange Money or Africell Money.</p></div>
+  <div class="card"><h3>Backup</h3><p style="font-size:13px;color:var(--dim)">Data is stored on this device. Export a backup regularly.</p><div class="row"><button class="btn" onclick="backup()">Export backup</button><label class="btn ghost" style="cursor:pointer;text-align:center">Restore backup<input type="file" accept=".json,application/json" hidden onchange="restoreBackup(this.files[0])"></label></div></div>`}};
+// ---- clients, statements, recurring expenses
+const segTabs=a=>`<div class="seg">${[['clients','Clients'],['sales','Sales'],['expenses','Expenses']].map(([k,l])=>`<button class="btn sm ${k===a?'':'ghost'}" onclick="location.hash='#${k}'">${l}</button>`).join('')}</div>`;
+function paperHead(s,hdr){return `<div class="ph">${s.logo?`<img src="${s.logo}" alt="">`:'<span></span>'}<div class="pi"><h2>${esc(s.name)}</h2>${hdr.map(x=>`<div>${esc(x)}</div>`).join('')}</div></div>`}
+const cSales=id=>S.tx.filter(t=>t.type==='in'&&t.cid===id);
+const cTot=L=>L.reduce((s,t)=>s+cv(t.amount,t.cur),0);
+function editClient(c){if(locked())return lockMsg();
+  modal(c?'Edit client':'New client',[['name','Name','text'],['phone','Phone','tel'],['email','Email','email'],['addr','Address','text'],['nif','NIF number (optional)','text']],c||{},v=>{v.name=v.name.trim()||'Client';if(c){Object.assign(c,v);S.tx.forEach(t=>{if(t.cid===c.id)t.cust=c.name})}else S.clients.push({id:uid(),...v})})}
+pages.clients=()=>{const rows=S.clients.map(c=>{const L=cSales(c.id);return{c,n:L.length,tot:cTot(L),owe:cTot(L.filter(t=>!paid(t)))}}).sort((a,b)=>b.tot-a.tot);
+  return `${segTabs('clients')}<div class="card"><div class="row"><h3>Clients</h3><button class="btn" onclick="editClient()">+ Add</button></div>${rows.length?`<table>${rows.map(({c,n,tot,owe})=>`<tr onclick="location.hash='#client-${c.id}'" style="cursor:pointer"><td>${esc(c.name)}<br><small style="color:var(--dim)">${esc(c.phone)||'—'} · ${n} sale${n===1?'':'s'}</small></td><td class="r">${fmt(tot)}${owe>0?`<br><small class="out">owes ${fmt(owe)}</small>`:''}</td></tr>`).join('')}</table>`:'<p style="color:var(--dim)">Add your clients to keep their purchase history. Then pick them when you make a sale.</p>'}</div>`};
+pages.client=id=>{const c=S.clients.find(x=>x.id===id);
+  if(!c)return `<div class="card"><p>Client not found.</p><button class="btn" onclick="location.hash='#clients'">Back</button></div>`;
+  const L=cSales(id).sort((a,b)=>b.date.localeCompare(a.date)||b.id-a.id),tot=cTot(L),owe=cTot(L.filter(t=>!paid(t)));
+  return `<div class="card"><div class="row" style="flex-wrap:nowrap"><button class="ib" aria-label="Back" onclick="location.hash='#clients'">${I('back')}</button><h3 style="flex:1;margin:0;min-width:0">${esc(c.name)}</h3><button class="ib" aria-label="Edit" onclick="editClient(S.clients.find(x=>x.id===${id}))">${I('pencil')}</button><button class="ib" aria-label="Delete" onclick="ask('Delete this client? Their past sales stay.',()=>{S.clients=S.clients.filter(x=>x.id!==${id});location.hash='#clients'})">${I('trash')}</button></div>
+  <p style="font-size:13px;color:var(--dim);margin:8px 0">${[c.phone,c.email,c.addr,c.nif&&'NIF: '+c.nif].filter(Boolean).map(esc).join(' · ')||'No contact details yet.'}</p>
+  <div class="two"><div class="sum">Purchases<br><b>${fmt(tot)}</b></div><div class="sum">Unpaid<br><b class="${owe>0?'out':''}">${fmt(owe)}</b></div></div>
+  <div class="row" style="margin-top:10px"><button class="btn" onclick="addSale({cid:${id}})">+ New sale</button><button class="btn ghost" onclick="statement(${id})">${I('share')}Share / print history</button></div></div>
+  <div class="card"><h3>History</h3>${L.length?`<table>${L.map(t=>`<tr><td>${t.date.slice(5)}<br><small style="color:var(--dim)">${esc(t.note)}${t.qty>1?' × '+t.qty:''}</small></td><td><small>${paid(t)?esc(t.method):'<b class="out">Unpaid</b>'}</small>${paid(t)?'':`<br><button class="btn sm" onclick="markPaid(${t.id})">Mark paid</button>`}</td><td class="r">${fc(t.amount,t.cur)}</td><td><button class="ib" aria-label="Share invoice" onclick="invoice(${t.id})">${I('share')}</button></td></tr>`).join('')}</table>`:'<p style="color:var(--dim)">No sales yet for this client.</p>'}</div>`};
+function statement(id){const c=S.clients.find(x=>x.id===id);if(!c)return;
+  const L=cSales(id).sort((a,b)=>a.date.localeCompare(b.date)||a.id-b.id),tot=cTot(L),owe=cTot(L.filter(t=>!paid(t))),{s,hdr,pays}=invData({});
+  const html=`<div class="paper">${paperHead(s,hdr)}<div class="pt"><b>CLIENT STATEMENT</b><span>${today()}</span></div><div><b>${esc(c.name)}</b>${c.phone?'<br>'+esc(c.phone):''}${c.addr?'<br>'+esc(c.addr):''}</div>
+  <table><tr><th>Date</th><th>Item</th><th class="r">Total</th><th>Status</th></tr>${L.map(t=>`<tr><td>${esc(t.date)}</td><td>${esc(t.note)}${t.qty>1?' × '+t.qty:''}</td><td class="r">${fc(t.amount,t.cur)}</td><td>${paid(t)?'Paid':'UNPAID'}</td></tr>`).join('')}</table>
+  <div class="tot"><span>Total purchases</span><span>${fmt(tot)}</span></div><div class="tot gt"><span>Balance due</span><span>${fmt(owe)}</span></div>
+  ${owe>0&&pays.length?`<div class="pay"><b>Pay by Mobile Money</b>${pays.map(([m,n])=>`<div>${esc(m)}: ${esc(n)}</div>`).join('')}</div>`:''}</div>`;
+  const txt=[s.name,...hdr,'','CLIENT STATEMENT · '+today(),c.name,'',...L.map(t=>t.date+' · '+t.note+(t.qty>1?' × '+t.qty:'')+' · '+fc(t.amount,t.cur)+' · '+(paid(t)?'Paid':'UNPAID')),'','Total purchases: '+fmt(tot),'Balance due: '+fmt(owe)].join('\n');
+  invoice(0,{html,txt,no:c.name})}
+function editRec(r){if(locked())return lockMsg();
+  modal(r?'Edit recurring expense':'New recurring expense',[['note','What is it? (rent, electricity, salary…)','text'],['amount','Amount','number'],['cur','Currency','select',['USD','CDF']],['method','Paid with','select',METH.filter(m=>m!=='Credit')],['day','Day of the month (1 to 28)','number'],...(r?[]:[['start','Start','select',['Next month','This month']]])],r||{cur:S.set.cur,method:'Cash',day:1,start:'Next month'},
+  v=>{v.amount=+v.amount;v.day=Math.min(28,Math.max(1,Math.floor(+v.day)||1));v.note=v.note.trim()||'Expense';
+    if(r){const {start,...w}=v;Object.assign(r,w)}else{const d=new Date();d.setDate(1);if(v.start==='This month')d.setMonth(d.getMonth()-1);S.rec.push({id:uid(),note:v.note,amount:v.amount,cur:v.cur,method:v.method,day:v.day,last:iso(d).slice(0,7)})}})}
+function togRec(id){const r=S.rec.find(x=>x.id===id);if(!r)return;r.paused=!r.paused;if(!r.paused){const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-1);const pm=iso(d).slice(0,7);if(r.last<pm)r.last=pm}save();render()}
+function runRecurring(){if(locked()||!S.rec.length)return;const now=new Date(),cm=iso(now).slice(0,7),td=now.getDate();let ch=false;
+  S.rec.forEach(r=>{if(r.paused)return;let [y,m]=r.last.split('-').map(Number);
+    for(;;){m++;if(m>12){m=1;y++}const key=y+'-'+String(m).padStart(2,'0');if(key>cm||(key===cm&&td<r.day))break;
+      S.tx.push({id:uid(),type:'out',date:key+'-'+String(r.day).padStart(2,'0'),cur:r.cur,method:r.method,note:r.note+' (recurring)',amount:r.amount,rec:r.id});r.last=key;ch=true}});
+  if(ch)save()}
+const recurCard=()=>`<div class="card"><div class="row"><h3>Recurring expenses</h3><button class="btn" onclick="editRec()">+ Add</button></div><p style="font-size:12px;color:var(--dim);margin:4px 0 8px">Each one is added to Expenses on its day every month, when you open the app. No need to type it again.</p>${S.rec.length?`<table>${S.rec.map(r=>`<tr><td>${esc(r.note)}<br><small style="color:var(--dim)">Day ${r.day} · ${esc(r.method)}${r.paused?' · paused':''}</small></td><td class="r out">${fc(r.amount,r.cur)}</td><td><div class="acts"><button class="ib" aria-label="${r.paused?'Resume':'Pause'}" onclick="togRec(${r.id})">${I(r.paused?'play':'pause')}</button><button class="ib" aria-label="Edit" onclick="editRec(S.rec.find(x=>x.id===${r.id}))">${I('pencil')}</button><button class="ib" aria-label="Delete" onclick="ask('Delete this recurring expense? Past entries stay.',()=>S.rec=S.rec.filter(x=>x.id!==${r.id}))">${I('trash')}</button></div></td></tr>`).join('')}</table>`:'<p style="color:var(--dim)">Add rent, electricity, salaries or any cost that repeats every month.</p>'}</div>`;
+function up(k,v){S.set[k]=v;save();render()}
+function restoreBackup(file){if(!file)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d||!d.set||!Array.isArray(d.tx))throw 0;ask('Replace everything on this device with this backup?',()=>{S=d;S.clients=S.clients||[];S.rec=S.rec||[]},'Yes, restore')}catch(e){toast('This file is not a valid backup')}};r.readAsText(file)}
+async function backup(){if(!await saveFile('backup-'+today()+'.json',JSON.stringify(S)))alert('Download is not available here.')}
+const TABS=[['reports','reports','Reports'],['sales','sales','Sales'],['+'],['stock','stock','Stock'],['docs','docs','Docs']];
+function quick(){const o=document.createElement('div');o.className='ov';o.style.alignItems='flex-end';o.onclick=e=>{if(e.target===o)o.remove()};
+  o.innerHTML=`<div class="mod sheet" style="padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))"><h3>Add new</h3><button class="btn" data-a="in">${I('sales')}&nbsp;New sale</button><button class="btn ghost" data-a="out">${I('expenses')}&nbsp;New expense</button><button class="btn ghost" data-a="cli">${I('users')}&nbsp;New client</button><button class="btn ghost" data-a="doc">${I('camera')}&nbsp;Scan invoice</button><button class="btn ghost" data-a="x">Cancel</button></div>`;
+  document.body.appendChild(o);o.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{const a=b.dataset.a;o.remove();if(a==='in'||a==='out')addTx(a);else if(a==='doc')addDoc();else if(a==='cli')editClient()})}
+const TK='fin_theme';
+try{const t=localStorage.getItem(TK);if(t)document.documentElement.dataset.theme=t}catch(e){}
+const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches};
+function toggleTheme(){const t=isDark()?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem(TK,t)}catch(e){}render()}
+function render(){
+  runRecurring();const r=(location.hash||'#reports').slice(1),dl=daysLeft();
+  $('#app').innerHTML=`<div class="top">${S.set.logo?`<img src="${S.set.logo}" alt="">`:''}<h1>${esc(S.set.name)}</h1><button class="ib" onclick="toggleTheme()" aria-label="${isDark()?'Switch to day mode':'Switch to night mode'}">${I(isDark()?'sun':'moon')}</button><button class="ib" onclick="location.hash='#settings'" aria-label="Settings">${I('gear')}</button></div>
+  <nav>${TABS.map(([id,i,l])=>id==='+'?`<button class="plus" onclick="quick()" aria-label="Add new"><span>${I('plus')}</span></button>`:`<button class="${(id===r||(id==='sales'&&(['expenses','recurring','clients'].includes(r)||r.startsWith('client-'))))?'on':''}" onclick="location.hash='#${id}'" aria-label="${l}"><span>${I(i)}</span><small>${l}</small></button>`).join('')}</nav>
+  ${dl<0?'<div class="warn">Your 3-month lease has ended. You can view your data but not add new entries. Renew for $30.</div>':dl<=14?`<div class="warn">Your lease ends in ${dl} days. Renew for $30 (Mobile Money).</div>`:''}
+  ${lowBanner()}${r.startsWith('client-')?pages.client(+r.slice(7)):(pages[r]||pages.reports)()}`}
+window.addEventListener('hashchange',render);render();
+</script></body></html>
